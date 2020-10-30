@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <nav>,  <mark>, <aside>, <time>, <section> tags are added as Semantic HTML change-->
+<!-- (Open Graph tag), (twitter card tag), (h3: Header tag), (Canonical tag) are added as SEO Change-->
+<!-- <button>, <abbr>, (good link text), <alt> are added as A11y change-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<!-- Change 1: This is an SEO Change (Open Graph tag)-->
+    <meta name="og:title" property="og:title" content="Personal Budget">
+<!-- Change 2: This is an SEO Change (Twitter card tag)-->
+    <meta name="twitter:card" content="summary">
+    <title>Personal Budget</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+
+<body>
+
+    <div class="menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="https://google.com">Google</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1>Personal Budget</h1>
+        <h2>A personal-budget management app</h2>
+    </div>
+
+    <!-- This is a Semantic HTML Change (<nav>, <mark>)-->
+    <nav>
+        <a href="https://www.thebalance.com/how-to-make-a-budget-1289587"><mark>Personal Budget Guide</mark></a>
+    </nav>
+    <div class="h-event">
+    <!-- This is a Semantic HTML Change (<aside>, <mark>)-->
+        <aside>
+    <!-- Change 3: This is an SEO Change (h3: Header tag)-->
+        <h3 class="p-name"><mark>Meetup</mark></h3>
+        <p>From 
+    <!-- This is a Semantic HTML Change (<time>)-->
+          <time class="dt-start" datetime="2020-09-24 12:00">24<sup>th</sup> Sept 2020, 12:00</time>
+          to <time class="dt-end" datetime="2020-09-24 18:00">18:00</time>
+          at <span class="p-location">Some bar in SF</span></p>
+        <p class="p-summary">Get together and discuss all things budget-related.</p>
+    
+    <!-- Change 1 & 2: This is an A11y Change (<button>, <abbr>) -->
+        <button><abbr title="Click here to register for meetup"><b>Register</b></abbr></button>
+        </aside>
+    </div>
+    <!-- This is a Semantic HTML Change (<section>, <mark>)-->
+    <section>
+        <h2><mark>Budget History</mark></h2>
+    <!-- Change 3: This is an A11y Change (good link text)-->
+        <p>A government <a href = "https://www.investopedia.com/terms/b/budget.asp"><mark>budget</mark></a> is a document prepared by the government and/or other political entity presenting its anticipated tax revenues 
+            (Inheritance tax, income tax, corporation tax, import taxes) and proposed spending/expenditure (Health care, Education, Defence, Roads, State Benefit) for the coming financial year.</p>
+    </section>
+      
+    <section>
+        <h2><mark>Purpose of personal budgeting</mark></h2>
+        <p>The overarching goal of a personal budget is to minimize expenses and maximize savings. By cutting down on unnecessary spending and
+            increasing your monthly savings, you can put that extra money toward important long-term financial goals like: Lowering credit card debt. Paying off loans.</p>
+    </section>
+
+    <!-- Change 4: This is an SEO Change (Canonical tag)-->
+    <link rel="canonical" href="https://www.thebalance.com/how-to-make-a-budget-1289587">
+
+    <div class="container center">
+
+        <div class="page-area">
+
+            <div class="text-box">
+                <h1>Stay on track</h1>
+                <p>
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </p>
+            </div>
+    
+            <div class="text-box">
+                <h1>Alerts</h1>
+                <p>
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </div>
+    
+            <div class="text-box">
+                <h1>Results</h1>
+                <p>
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    because they know it is all good and accounted for.
+                </p>
+            </div>
+    
+            <div class="text-box">
+                <h1>Free</h1>
+                <p>
+                    This app is free!!! And you are the only one holding your data!
+                </p>
+            </div>
+    
+            <div class="text-box">
+                <h1>Stay on track</h1>
+                <p>
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </p>
+            </div>
+    
+            <div class="text-box">
+                <h1>Alerts</h1>
+                <p>
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </div>
+    
+            <div class="text-box">
+                <h1>Results</h1>
+                <p>
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    because they know it is all good and accounted for.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container center">
+
+        <div class="page-area">
+
+            <div class="text-box">
+                <h1>Chart</h1>
+                <p>
+                    <!-- This app is free!!! And you are the only one holding your data! -->
+                    <canvas id = "myChart" width = "400" height = "400"></canvas>
+                </p>
+                
+                <h1>D3 Chart</h1>
+                <div id="d3chart"></div>
+                
+            </div>
+
+            
+        </div>
+    </div>
+    <!-- <center> -->
+    <!-- Change 4: This is an A11y Change (<alt> tag) -->
+        <!-- <img src="thankyou.jpg" alt="Thank you for visiting" style="width: 21%"> -->
+    <!-- </center> --> -->
+    <div class="bottom">
+        <div class="center">
+            All rights reserved &copy; Ashwin Katale
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+
+    <script>
+        var dataSource = {
+            datasets: [
+                {
+                    data: [],
+                    backgroundColor: [],
+                }
+            ],
+            labels: []
+        };
+
+        function createChart() {
+            var ctx = document.getElementById("myChart").getContext("2d");
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: dataSource
+            });
+        }
+
+        function getBudget() {
+            axios.get('http://localhost:3000/budget')
+            .then(function (res) {
+                console.log(res);
+                for(var i = 0; i<res.data.length; i++) {
+                    dataSource.datasets[0].data[i] = res.data[i].budget;
+                    dataSource.labels[i] = res.data[i].title;
+                    dataSource.datasets[0].backgroundColor[i] = res.data[i].color;
+                }
+                createChart();
+            });
+        }
+        getBudget();
+        // createChart();
+    </script>
+    <script>
+        var datamapp= new Object()
+        var datalabels=[]
+        var d3color = []
+        function created3()
+        {
+        var width = 550
+            height = 550
+            margin = 100
+        
+        var radius = Math.min(width, height) / 2 - margin
+        
+        var svg = d3.select("#d3chart")
+          .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        
+        var color = d3.scaleOrdinal()
+          .domain([datalabels])
+          .range(d3color);
+        
+        var pie = d3.pie()
+          .sort(null) 
+          .value(function(d) {return d.value; })
+        var data_ready = pie(d3.entries(datamapp))
+        
+        var arc = d3.arc()
+          .innerRadius(radius * 0.3)         
+          .outerRadius(radius * 0.8)
+        
+        var outerArc = d3.arc()
+          .innerRadius(radius * 0.9)
+          .outerRadius(radius * 0.9)
+        
+        svg
+          .selectAll('allSlices')
+          .data(data_ready)
+          .enter()
+          .append('path')
+          .attr('d', arc)
+          .attr('fill', function(d){ return(color(d.data.key)) })
+          .attr("stroke", "white")
+          .style("stroke-width", "2px")
+          .style("opacity", 0.7)
+        
+        svg
+          .selectAll('allPolylines')
+          .data(data_ready)
+          .enter()
+          .append('polyline')
+            .attr("stroke", "black")
+            .style("fill", "none")
+            .attr("stroke-width", 1)
+            .attr('points', function(d) {
+              var posA = arc.centroid(d) 
+              var posB = outerArc.centroid(d) 
+              var posC = outerArc.centroid(d); 
+              var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2 
+              posC[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); 
+              return [posA, posB, posC]
+            })
+        
+        svg
+          .selectAll('allLabels')
+          .data(data_ready)
+          .enter()
+          .append('text')
+            .text( function(d) { console.log(d.data.key) ; return d.data.key } )
+            .attr('transform', function(d) {
+                var pos = outerArc.centroid(d);
+                var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+                pos[0] = radius * 0.99 * (midangle < Math.PI ? 1 : -1);
+                return 'translate(' + pos + ')';
+            })
+            .style('text-anchor', function(d) {
+                var midangle = d.startAngle + (d.endAngle - d.startAngle) / 2
+                return (midangle < Math.PI ? 'start' : 'end')
+            })
+        }
+        
+        function getBudget() {
+            axios.get('http://localhost:3000/budget')
+            .then(function (res) {
+                console.log(res);
+                for(var i = 0; i<res.data.length; i++) {
+                    datamapp[res.data[i].title] = res.data[i].budget;
+                    datalabels[i] = res.data[i].title;
+                    d3color[i] = res.data[i].color;
+                }
+                created3();
+            });
+        }
+        getBudget();
+        </script>
+</body>
+</html>
